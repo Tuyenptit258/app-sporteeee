@@ -16,7 +16,7 @@ const db = mongoose.connection
 db.on('error',(error)=> console.error(error))
 db.once('open',()=>console.log('Connected on Database'))
 
-app.use(express.json())
+/*app.use(express.json())
 
 //const subcribersRouter = require('./routes/subscribers')
 //app.use('/subscribers',subcribersRouter)
@@ -114,7 +114,7 @@ function checkNotAuthenticated(req, res, next) {
     return res.redirect('/')
   }
   next()
-}/*
+}
 const express = require('express')
 const app = express()
 const path = require('path')
@@ -122,6 +122,9 @@ app.use('/',(req,res)=>{
   var duongDanFile = path.join(__dirname,'home.html')
   res.sendFile(duongDanFile)
 })*/
+app.use('/', (req,res)=>{
+  res.json('Hello')
+})
 app.listen(process.env.PORT,function(){
   
 })
