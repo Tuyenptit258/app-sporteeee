@@ -122,6 +122,6 @@ app.use('/',(req,res)=>{
   var duongDanFile = path.join(__dirname,'home.html')
   res.sendFile(duongDanFile)
 })*/
-app.listen("3500",function(){
+app.listen(process.env.PORT,function(){
   
 })
