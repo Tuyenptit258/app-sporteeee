@@ -122,7 +122,7 @@ app.use('/',(req,res)=>{
   var duongDanFile = path.join(__dirname,'home.html')
   res.sendFile(duongDanFile)
 })*/
-app.use('/', (req,res)=>{
+app.get('/', (req,res)=>{
   res.json('Hello')
 })
 app.listen(process.env.PORT,function(){
